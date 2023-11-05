@@ -1,7 +1,8 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import App from '../App';
 import MainLayout from '../App';
+import Login from '../Pages/Login';
 
 const Routes = createBrowserRouter([
   {
@@ -9,7 +10,8 @@ const Routes = createBrowserRouter([
     element: <MainLayout></MainLayout>,
     children: [
       {
-
+        path: '/login',
+        element: <Login></Login>
       }
     ]
   }
