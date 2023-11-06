@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Tech Insider Newsletter",
+    "img": "https://i.postimg.cc/jqykkTxD/pexels-lisa.jpg",
+    "short_description": "Stay updated with the latest tech trends, innovations, and insights.",
+    "long_description": "The Tech Insider Newsletter is your go-to source for staying informed about the ever-evolving world of technology. Get in-depth analysis, product reviews, and exclusive insights from industry experts.",
+    "category": "Technology",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-03-04"
+  },
+  {
+    "title": "Healthy Living Digest",
+    "img": "https://i.postimg.cc/qqj1pkZ0/ello-4f-WN0-AIo.jpg",
+    "short_description": "Receive tips, recipes, and advice for a healthier lifestyle.",
+    "long_description": "The Healthy Living Digest is your key to a healthier and more balanced life. You'll find articles on nutrition, fitness, mental well-being, and more. Subscribe and start your journey towards a healthier you.",
+    "category": "Health & Wellness",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-04-05"
+  },
+  {
+    "title": "Financial Insights Weekly",
+    "img": "https://i.postimg.cc/6pTm5vXP/campaign.jpg",
+    "short_description": "Get weekly financial updates, investment tips, and market analysis.",
+    "long_description": "Stay ahead of the financial curve with our Financial Insights Weekly newsletter. Receive expert advice on managing your finances, investing wisely, and navigating the stock market.",
+    "category": "Finance",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-12-03"
+  },
+  {
+    "title": "Travel Enthusiast Chronicles",
+    "img": "https://i.postimg.cc/Xvqyp9NT/mesut-kaya-e-Ocyhe5-9s-Q-unsplash.jpg",
+    "short_description": "Explore the world through captivating travel stories and destination guides.",
+    "long_description": "Embark on a journey without leaving your inbox with the Travel Enthusiast Chronicles. This newsletter is your passport to remarkable travel tales, destination recommendations, and insider tips.",
+    "category": "Travel",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-09-18"
+  },
+  {
+    "title": "Foodie's Delight Newsletter",
+    "img": "https://i.postimg.cc/qqy1S99X/marco-guerrero-uuu-Xb8gk-JKI-unsplash.jpg",
+    "short_description": "Discover mouthwatering recipes, culinary adventures, and dining experiences.",
+    "long_description": "Satisfy your food cravings with the Foodie's Delight Newsletter. Explore diverse cuisines, learn new recipes, and keep up with the culinary world's latest trends.",
+    "category": "Food & Dining",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-29-02"
+  },
+  {
+    "title": "Creativity Unleashed Insights",
+    "img": "https://i.postimg.cc/tg4mJvxp/laura-adai-F9z-Bv-Ou-THg-M-unsplash.jpg",
+    "short_description": "Unlock your creative potential with inspiring ideas and artistic expressions.",
+    "long_description": "Nurture your creativity with the Creativity Unleashed Insights newsletter. Discover artistic projects, tips for unleashing your creative potential, and inspiring stories from the creative community.",
+    "category": "Art & Creativity",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-10-19"
+  },
+  {
+    "title": "Science & Discovery Chronicle",
+    "img": "https://i.postimg.cc/3whYqTV9/ousa-chea-g-KUC4-TMh-Oi-Y-unsplash.jpg",
+    "short_description": "Stay informed about breakthroughs in science, nature, and space exploration.",
+    "long_description": "Ignite your curiosity with the Science & Discovery Chronicle. This newsletter delivers fascinating insights into scientific discoveries, space exploration, and the wonders of the natural world.",
+    "category": "Science & Nature",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-05-05"
+  },
+  {
+    "title": "Sustainable Living Daily",
+    "img": "https://i.postimg.cc/5NcztHCt/pickawood-GN9-Jh-LPw3ow-unsplash.jpg",
+    "short_description": "Receive daily tips and updates on eco-friendly living and sustainability.",
+    "long_description": "Make a positive impact on the planet with the Sustainable Living Daily newsletter. Get daily tips on sustainable living practices, eco-friendly products, and green initiatives.",
+    "category": "Environment",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-08-25"
+  },
+  {
+    "title": "Career Success Insider",
+    "img": "https://i.postimg.cc/wTCYZpZZ/krakenimages-376-KN-ISpl-E-unsplash.jpg",
+    "short_description": "Gain insights, career advice, and job market updates for professional growth.",
+    "long_description": "Achieve your career aspirations with the Career Success Insider. This newsletter provides career advice, job market insights, and tips for professional development.",
+    "category": "Career & Professional Growth",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-06-05"
+  },
+  {
+    "title": "Gardener's Green Thumb Tips",
+    "img": "https://i.postimg.cc/mZ9v9qtS/pelargoniums-for-europe-a-HFl-P2q-Krxc-unsplash.jpg",
+    "short_description": "Get gardening tips, plant care guides, and garden design inspiration.",
+    "long_description": "Elevate your gardening skills with the Gardener's Green Thumb Tips newsletter. Explore plant care, garden design ideas, and seasonal gardening recommendations.",
+    "category": "Gardening",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-01-15"
+  },
+  {
+    "title": "Mindfulness Moments",
+    "img": "https://i.postimg.cc/ZqZnk32G/william-farlow-Ieva-ZPwq0mw-unsplash.jpg",
+    "short_description": "Experience daily moments of mindfulness, meditation, and inner peace.",
+    "long_description": "Embrace mindfulness in your daily life with Mindfulness Moments. This newsletter offers meditation practices, mindfulness exercises, and tips for achieving inner peace and balance.",
+    "category": "Mindfulness & Well-being",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-09-07"
+  },
+  {
+    "title": "Literary Escapes Monthly",
+    "img": "https://i.postimg.cc/L6p8gj6n/geilan-malet-bates-u-RLECci4-Hl4-unsplash.jpg",
+    "short_description": "Travel through books with monthly literary recommendations and author spotlights.",
+    "long_description": "Immerse yourself in the world of literature with Literary Escapes Monthly. Discover new books, explore literary genres, and enjoy author interviews and book reviews.",
+    "category": "Books & Literature",
+    "details_btn": "Subscribe Now",
+    "wishlist_btn": "Add to Favorites",
+    "date": "2023-10-05"
+  }
+]

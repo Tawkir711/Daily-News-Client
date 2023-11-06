@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const Newsletter = () => {
   const handleSubmit = e => {
@@ -7,9 +8,20 @@ const Newsletter = () => {
     const email = form.email.value;
     console.log(email);
   }
+
+  const handleEmail = () => {
+    if (handleEmail) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops Try Again",
+        text: error.message,
+      });
+    }
+  }
+
   return (
     <form onSubmit={handleSubmit}>
-      <div className="form-control mx-auto w-4/12 my-10">
+      <div className="form-control mx-auto md:w-4/12 my-10 px-3 ">
         <h1 className="text-2xl font-semibold">Newsletter Section</h1>
         <label className="label">
           <span className="label-text">Your Email</span>
@@ -22,12 +34,7 @@ const Newsletter = () => {
             placeholder="Enter Your Email"
             className="input input-bordered"
           />
-          <input
-            type="submit"
-            value="Submit"
-            className="
-          btn btn-ghost"
-          />
+          <button onClick={handleEmail} className='btn'>Submit</button>
         </label>
       </div>
     </form>

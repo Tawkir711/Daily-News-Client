@@ -22,7 +22,7 @@ const Navbar = () => {
   const userName = user && user.displayName;
 
   const navLinks = (
-    <>
+    <div className="flex">
       <li>
         <NavLink
           to={"/"}
@@ -39,6 +39,62 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
+          to={"/addBlog"}
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "underline text-white btn btn-primary btn-sm"
+              : "btn btn-ghost btn-sm"
+          }
+        >
+          Add Blog
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={"/allBlogs"}
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "underline text-white btn btn-primary btn-sm"
+              : "btn btn-ghost btn-sm"
+          }
+        >
+          All Blogs
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={"/featuredBlogs"}
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "underline text-white btn btn-primary btn-sm"
+              : "btn btn-ghost btn-sm"
+          }
+        >
+          Featured Blogs
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={"/wishlist"}
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "underline text-white btn btn-primary btn-sm"
+              : "btn btn-ghost btn-sm"
+          }
+        >
+          Wishlist
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
           to={"/login"}
           className={({ isActive, isPending }) =>
             isPending
@@ -51,7 +107,7 @@ const Navbar = () => {
           Login
         </NavLink>
       </li>
-    </>
+    </div>
   );
 
   return (
