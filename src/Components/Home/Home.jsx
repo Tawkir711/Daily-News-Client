@@ -1,9 +1,13 @@
 import React from 'react';
 import Newsletter from '../Newsletter/Newsletter';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Daily News / Home</title>
+      </Helmet>
       <div
         className="hero min-h-screen"
         style={{
