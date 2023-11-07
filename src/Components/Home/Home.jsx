@@ -1,6 +1,7 @@
 import React from 'react';
 import Newsletter from '../Newsletter/Newsletter';
 import { Helmet } from 'react-helmet';
+import AboutUs from '../AboutUS/AboutUs';
 
 const Home = () => {
   return (
@@ -31,6 +32,7 @@ const Home = () => {
         </div>
       </div>
       <Newsletter></Newsletter>
+      <AboutUs></AboutUs>
     </div>
   );
 };

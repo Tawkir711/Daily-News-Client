@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import Swal from 'sweetalert2';
 
 const AddBlog = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -26,7 +27,15 @@ const AddBlog = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-      console.log(data);
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Done",
+            text: "Your Blog Added",
+            
+          });
+        }
     })
 
   }

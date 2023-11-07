@@ -22,7 +22,7 @@ const Navbar = () => {
   const userName = user && user.displayName;
 
   const navLinks = (
-    <div className="flex">
+    <div className="lg:flex">
       <li>
         <NavLink
           to={"/"}
