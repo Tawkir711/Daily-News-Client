@@ -66,6 +66,14 @@ const AddBlog = () => {
               <span className="label-text">Category</span>
             </label>
             <label className="input-group">
+              <select>
+                <option value="Technology">Technology</option>
+                <option value="Health & Wellness">Health & Wellness</option>
+                <option value="Finance">Finance</option>
+                <option value="Travel">Travel</option>
+                <option value="Food & Dining">Food & Dining</option>
+                <option value="Environment">Environment</option>
+              </select>
               <input
                 type="text"
                 name="category"

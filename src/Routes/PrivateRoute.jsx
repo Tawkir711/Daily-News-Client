@@ -11,8 +11,8 @@ const PrivateRoute = ({ children }) => {
   if (loading) {
     return (
       <img
-        className="mx-auto"
-        src="https://i.postimg.cc/TwvH6twB/365923266-310060981587089-6038640626746651061-n.gif"
+        className="mx-auto h-[500px]"
+        src="https://i.postimg.cc/VvySJCTF/d9f21515b1e38d83e94fdbce88f623b6.gif"
         alt="loading gif"
       />
     );
