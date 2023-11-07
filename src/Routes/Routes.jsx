@@ -7,9 +7,12 @@ import Home from "../Components/Home/Home";
 import Register from "../Pages/Register";
 import AddBlog from './../Pages/AddBlog';
 import AllBlogs from './../Pages/AllBlogs';
-import Wishlist from './../Pages/Wishlist';
+// import Wishlist from './../Pages/Wishlist';
 import FeaturedBlogs from "../Pages/FeaturedBlogs";
-import PrivateRoute from "./PrivateRoute";
+import Wishlist from "../Pages/Wishlist";
+import WishlistCard from "../Components/WishlistCard/WishlistCard";
+// import PrivateRoute from "./PrivateRoute";
+// import AddToWishlist from "../Components/AddToWishlist/AddToWishlist";
 
 const Routes = createBrowserRouter([
   {
@@ -34,8 +37,14 @@ const Routes = createBrowserRouter([
         element: <FeaturedBlogs></FeaturedBlogs>
       },
       {
-        path:'/wishlist',
-        element: <PrivateRoute><Wishlist></Wishlist></PrivateRoute>
+        path: '/wishlist',
+        element: <Wishlist></Wishlist>,
+        loader: () => fetch('http://localhost:5000/wishlist2')
+      },
+      {
+        path: '/wishlistCard/:id',
+        element: <WishlistCard></WishlistCard>,
+        loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)
       },
       {
         path: "/login",
