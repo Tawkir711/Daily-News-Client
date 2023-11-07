@@ -9,15 +9,6 @@ const Newsletter = () => {
     console.log(email);
   }
 
-  const handleEmail = () => {
-    if (handleEmail) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops Try Again",
-        text: error.message,
-      });
-    }
-  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -34,7 +25,7 @@ const Newsletter = () => {
             placeholder="Enter Your Email"
             className="input input-bordered"
           />
-          <button onClick={handleEmail} className='btn'>Submit</button>
+          <button onClick={""} className='btn'>Submit</button>
         </label>
       </div>
     </form>

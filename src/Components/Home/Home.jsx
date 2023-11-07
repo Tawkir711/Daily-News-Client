@@ -2,6 +2,7 @@ import React from 'react';
 import Newsletter from '../Newsletter/Newsletter';
 import { Helmet } from 'react-helmet';
 import AboutUs from '../AboutUS/AboutUs';
+import RecentBlog from '../RecentBlog/RecentBlog';
 
 const Home = () => {
   return (
@@ -31,6 +32,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <RecentBlog></RecentBlog>
       <Newsletter></Newsletter>
       <AboutUs></AboutUs>
     </div>

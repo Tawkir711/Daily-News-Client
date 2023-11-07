@@ -9,12 +9,11 @@ const AddBlog = () => {
     const form = event.target;
 
     const title = form.title.value;
-    const category = form.category.value;
     const longDes = form.longDes.value;
     const shortDes = form.shortDes.value;
     const photo = form.photo.value;
     const allBlogs = {
-      title, category, longDes, shortDes, photo, startDate
+      title, longDes, shortDes, photo, startDate
     };
     console.log(allBlogs);
 
@@ -32,7 +31,7 @@ const AddBlog = () => {
           Swal.fire({
             icon: "success",
             title: "Done",
-            text: "Your Blog Added",
+            text: "Added Your Blog ",
             
           });
         }
@@ -65,22 +64,14 @@ const AddBlog = () => {
             <label className="label">
               <span className="label-text">Category</span>
             </label>
-            <label className="input-group">
-              <select>
-                <option value="Technology">Technology</option>
-                <option value="Health & Wellness">Health & Wellness</option>
-                <option value="Finance">Finance</option>
-                <option value="Travel">Travel</option>
-                <option value="Food & Dining">Food & Dining</option>
-                <option value="Environment">Environment</option>
-              </select>
-              <input
-                type="text"
-                name="category"
-                placeholder="Category"
-                className="input input-bordered w-full"
-              />
-            </label>
+            <select className="input input-bordered w-full">
+              <option value="Technology">Technology</option>
+              <option value="Health & Wellness">Health & Wellness</option>
+              <option value="Finance">Finance</option>
+              <option value="Travel">Travel</option>
+              <option value="Food & Dining">Food & Dining</option>
+              <option value="Environment">Environment</option>
+            </select>
           </div>
         </div>
         <div className="md:flex mb-8">
@@ -104,7 +95,7 @@ const AddBlog = () => {
             </label>
             <label className="input-group">
               <input
-                type="text"
+                type="text" required
                 name="shortDes"
                 placeholder="Short Description"
                 className="input input-bordered w-full"
@@ -119,7 +110,7 @@ const AddBlog = () => {
             </label>
             <label className="input-group">
               <input
-                type="text"
+                type="text" required
                 name="photo"
                 placeholder="Photo required URL"
                 className="input input-bordered w-full"
