@@ -14,7 +14,7 @@ const WishDetails = ({ item }) => {
         <h2 className="card-title"> {title} </h2>
         <p> {shortDes} </p>
         <div className="card-actions">
-          <Link to={'/details'}>
+          <Link to={'/'}>
             <button className="btn btn-primary">Details</button>
           </Link>
           <button className="btn btn-primary">Remove</button>

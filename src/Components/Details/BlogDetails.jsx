@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const BlogDetails = () => {
   const details = useLoaderData();
-  const { title, photo, category, shortDes, longDes } = details;
+  const {_id, title, photo, category, shortDes, longDes } = details;
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
@@ -18,7 +18,7 @@ const BlogDetails = () => {
           <Link to={'/'}>
             <button className="btn btn-grad">Back Home</button>
           </Link>
-          <Link >
+          <Link to={`/update/${_id}`}>
             <button className="btn btn-grad">Update</button>
           </Link>
         </div>
