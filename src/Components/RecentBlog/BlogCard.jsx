@@ -13,7 +13,7 @@ const BlogCard = ({ blog }) => {
         <h2 className="card-title">Title: {title} </h2>
         <p className="text-base font-normal"> {shortDes} </p>
         <div className="card-actions justify-between">
-          <Link to={'/details'}>
+          <Link to={`/blogDetails/${_id}`}>
             <button className="btn btn-grad">Details</button>
           </Link>
           <Link to={`/wishlistCard/${_id}`}>

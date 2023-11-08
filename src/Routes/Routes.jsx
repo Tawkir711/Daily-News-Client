@@ -11,6 +11,7 @@ import AllBlogs from './../Pages/AllBlogs';
 import FeaturedBlogs from "../Pages/FeaturedBlogs";
 import Wishlist from "../Pages/Wishlist";
 import WishlistCard from "../Components/WishlistCard/WishlistCard";
+import BlogDetails from "../Components/Details/BlogDetails";
 // import Details from "../Components/Details/Details";
 // import PrivateRoute from "./PrivateRoute";
 // import AddToWishlist from "../Components/AddToWishlist/AddToWishlist";
@@ -49,10 +50,12 @@ const Routes = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/blogs/${params.id}`),
       },
-      // {
-      //   path: "/details",
-      //   element: <Details></Details>,
-      // },
+      {
+        path: "/blogDetails/:id",
+        element: <BlogDetails></BlogDetails>,
+        loader: ({params}) =>
+          fetch(`http://localhost:5000/allBlog/${params.id}`),
+      },
       {
         path: "/login",
         element: <Login></Login>,

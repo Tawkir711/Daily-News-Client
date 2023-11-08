@@ -11,9 +11,9 @@ const RecentBlog = () => {
   }, [])
   // console.log(blogs);
   return (
-    <div className="my-4 bg-base-100">
+    <div className="my-8 bg-base-100">
       <div className="text-center">
-        <h3 className="text-2xl font-semibold">Recent Blog & Posts Section</h3>
+        <h3 className="text-2xl font-bold">Recent Blog & Posts Section</h3>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-6">
         {blogs.map((blog) => (
