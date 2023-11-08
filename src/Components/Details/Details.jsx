@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BlogCard = ({ blog }) => {
-  const {_id , category, photo, shortDes, title, } = blog;
+const Details = ({ bog }) => {
+  const { _id, category, photo, shortDes, title } = bog;
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
@@ -13,7 +13,7 @@ const BlogCard = ({ blog }) => {
         <h2 className="card-title">Title: {title} </h2>
         <p className="text-base font-normal"> {shortDes} </p>
         <div className="card-actions justify-between">
-          <Link to={'/details'}>
+          <Link>
             <button className="btn btn-grad">Details</button>
           </Link>
           <Link to={`/wishlistCard/${_id}`}>
@@ -25,4 +25,4 @@ const BlogCard = ({ blog }) => {
   );
 };
 
-export default BlogCard;
+export default Details;

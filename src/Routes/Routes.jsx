@@ -11,6 +11,7 @@ import AllBlogs from './../Pages/AllBlogs';
 import FeaturedBlogs from "../Pages/FeaturedBlogs";
 import Wishlist from "../Pages/Wishlist";
 import WishlistCard from "../Components/WishlistCard/WishlistCard";
+// import Details from "../Components/Details/Details";
 // import PrivateRoute from "./PrivateRoute";
 // import AddToWishlist from "../Components/AddToWishlist/AddToWishlist";
 
@@ -21,38 +22,44 @@ const Routes = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path:'/',
-        element: <Home></Home>
+        path: "/",
+        element: <Home></Home>,
       },
       {
-        path:'/addBlog',
-        element: <AddBlog></AddBlog>
+        path: "/addBlog",
+        element: <AddBlog></AddBlog>,
       },
       {
-        path:'/allBlogs',
-        element: <AllBlogs></AllBlogs>
+        path: "/allBlogs",
+        element: <AllBlogs></AllBlogs>,
+        // loader: () => fetch("http://localhost:5000/allBlog"),
       },
       {
-        path:'/featuredBlogs',
-        element: <FeaturedBlogs></FeaturedBlogs>
+        path: "/featuredBlogs",
+        element: <FeaturedBlogs></FeaturedBlogs>,
       },
       {
-        path: '/wishlist',
+        path: "/wishlist",
         element: <Wishlist></Wishlist>,
-        loader: () => fetch('http://localhost:5000/wishlist2')
+        loader: () => fetch("http://localhost:5000/wishlist2"),
       },
       {
-        path: '/wishlistCard/:id',
+        path: "/wishlistCard/:id",
         element: <WishlistCard></WishlistCard>,
-        loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/blogs/${params.id}`),
       },
+      // {
+      //   path: "/details",
+      //   element: <Details></Details>,
+      // },
       {
         path: "/login",
         element: <Login></Login>,
       },
       {
         path: "/register",
-        element: <Register></Register> ,
+        element: <Register></Register>,
       },
     ],
   },
