@@ -3,6 +3,7 @@ import Newsletter from '../Newsletter/Newsletter';
 import { Helmet } from 'react-helmet';
 import AboutUs from '../AboutUS/AboutUs';
 import RecentBlog from '../RecentBlog/RecentBlog';
+import FAQ from '../FAQ/FAQ';
 
 const Home = () => {
   return (
@@ -35,6 +36,7 @@ const Home = () => {
       <RecentBlog></RecentBlog>
       <Newsletter></Newsletter>
       <AboutUs></AboutUs>
+      <FAQ></FAQ>
     </div>
   );
 };
