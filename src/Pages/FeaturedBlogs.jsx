@@ -3,7 +3,14 @@ import MUIDataTable from 'mui-datatables';
 import React, { useEffect, useState } from 'react';
 
 const FeaturedBlogs = () => {
-  const columns = ["Title", "Owner Name", "Owner Image"];
+  const columns = ["Title", "Owner Name", {
+    name: "Image", // Replace with the actual property name containing the image URL
+    options: {
+      customBodyRender: (value, tableMeta, updateValue) => (
+        <img src={value} alt="Avatar" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+      ),
+    },
+  },];
 
   
   const [blogs, setBlogs] = useState([]);
