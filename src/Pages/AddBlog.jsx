@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../Provider/Context';
 
 const AddBlog = () => {
+  const { user } = useContext(AuthContext);
+  const [value, setValue] = useState();
   const [startDate, setStartDate] = useState(new Date());
+  const handleCategory = (e) => {
+    const newValue = e.target.value;
+    console.log(newValue);
+    setValue(newValue);
+  }
   const handleAddBlog = event => {
     event.preventDefault();
     const form = event.target;
@@ -12,8 +20,9 @@ const AddBlog = () => {
     const longDes = form.longDes.value;
     const shortDes = form.shortDes.value;
     const photo = form.photo.value;
+    const category = value;
     const allBlogs = {
-      title, longDes, shortDes, photo, startDate
+      title, longDes, shortDes, photo, category, startDate, email:user.email , ownerName:user.displayName , ownerImage:user.photoURL
     };
     console.log(allBlogs);
 
@@ -64,13 +73,27 @@ const AddBlog = () => {
             <label className="label">
               <span className="label-text">Category</span>
             </label>
-            <select className="input input-bordered w-full">
+            <select
+              onChange={handleCategory}
+              value={value}
+              className="input input-bordered w-full"
+            >
               <option value="Technology">Technology</option>
               <option value="Health & Wellness">Health & Wellness</option>
               <option value="Finance">Finance</option>
               <option value="Travel">Travel</option>
               <option value="Food & Dining">Food & Dining</option>
+              <option value="Art & Creativity">Art & Creativity</option>
+              <option value="Science & Nature">Science & Nature</option>
+              <option value="Career & Professional Growth">
+                Career & Professional Growth
+              </option>
               <option value="Environment">Environment</option>
+              <option value="Gardening">Gardening</option>
+              <option value="Mindfulness & Well-being">
+                Mindfulness & Well-being
+              </option>
+              <option value="Books & Literature">Books & Literature</option>
             </select>
           </div>
         </div>
@@ -95,7 +118,8 @@ const AddBlog = () => {
             </label>
             <label className="input-group">
               <input
-                type="text" required
+                type="text"
+                required
                 name="shortDes"
                 placeholder="Short Description"
                 className="input input-bordered w-full"
@@ -110,7 +134,8 @@ const AddBlog = () => {
             </label>
             <label className="input-group">
               <input
-                type="text" required
+                type="text"
+                required
                 name="photo"
                 placeholder="Photo required URL"
                 className="input input-bordered w-full"
