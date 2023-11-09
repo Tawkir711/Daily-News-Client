@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import BlogCard from './BlogCard';
-import {motion} from 'framer-motion'
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import BlogCard from "./BlogCard";
+import { motion } from "framer-motion";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 const RecentBlog = () => {
-
   // const {data: blogs } = useQuery({
   //   queryKey: ['blogs'],
   //   queryFn: async () => {
-  //     const res = await fetch('http://localhost:5000/blogs');
+  //     const res = await fetch('https://assignment-11-server-nine-psi.vercel.app/blogs');
   //     return res.json();
   //   }
   // })
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/blogs')
-      .then(data => {
-      setBlogs(data.data)
-    })
-  }, [])
+    axios
+      .get("https://assignment-11-server-nine-psi.vercel.app/blogs")
+      .then((data) => {
+        setBlogs(data.data);
+      });
+  }, []);
 
   // useEffect(() => {
-  //   fetch('http://localhost:5000/blogs')
+  //   fetch('https://assignment-11-server-nine-psi.vercel.app/blogs')
   //     .then(res => res.json())
   //   .then(data => setBlogs(data))
   // }, [])

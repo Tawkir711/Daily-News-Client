@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import Swal from 'sweetalert2';
-import { AuthContext } from '../Provider/Context';
+import React, { useContext, useState } from "react";
+import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/Context";
 
 const AddBlog = () => {
   const { user } = useContext(AuthContext);
@@ -11,8 +11,8 @@ const AddBlog = () => {
     const newValue = e.target.value;
     console.log(newValue);
     setValue(newValue);
-  }
-  const handleAddBlog = event => {
+  };
+  const handleAddBlog = (event) => {
     event.preventDefault();
     const form = event.target;
 
@@ -22,16 +22,24 @@ const AddBlog = () => {
     const photo = form.photo.value;
     const category = value;
     const allBlogs = {
-      title, longDes, shortDes, photo, category, startDate, email:user.email , ownerName:user.displayName , ownerImage:user.photoURL
+      title,
+      longDes,
+      shortDes,
+      photo,
+      category,
+      startDate,
+      email: user.email,
+      ownerName: user.displayName,
+      ownerImage: user.photoURL,
     };
     console.log(allBlogs);
 
-    fetch('http://localhost:5000/addBlog', {
-      method: 'POST',
+    fetch("https://assignment-11-server-nine-psi.vercel.app/addBlog", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json',
+        "content-type": "application/json",
       },
-      body: JSON.stringify(allBlogs)
+      body: JSON.stringify(allBlogs),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -41,12 +49,10 @@ const AddBlog = () => {
             icon: "success",
             title: "Done",
             text: "Added Your Blog ",
-            
           });
         }
-    })
-
-  }
+      });
+  };
   return (
     <div className="bg-[#d148a142] p-4 lg:p-10 my-7">
       <Helmet>

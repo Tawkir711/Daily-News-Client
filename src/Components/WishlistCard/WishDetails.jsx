@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const WishDetails = ({ item, setItmData, itmData }) => {
   // const { title, shortDes, category, _id, photo } = item;
@@ -21,9 +21,12 @@ const WishDetails = ({ item, setItmData, itmData }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/wishlist2/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://assignment-11-server-nine-psi.vercel.app/wishlist2/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             const remaining = myData?.filter((data) => data._id !== id);

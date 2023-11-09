@@ -22,10 +22,10 @@ const Update = () => {
       longDes,
       shortDes,
       photo,
-      category
-    }
+      category,
+    };
     console.log(allBlogs);
-    fetch(`http://localhost:5000/blogsId/${_id}`, {
+    fetch(`https://assignment-11-server-nine-psi.vercel.app/blogsId/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -5,8 +5,8 @@ import Login from "../Pages/Login";
 import ErrorPage from "../Pages/ErrorPage";
 import Home from "../Components/Home/Home";
 import Register from "../Pages/Register";
-import AddBlog from './../Pages/AddBlog';
-import AllBlogs from './../Pages/AllBlogs';
+import AddBlog from "./../Pages/AddBlog";
+import AllBlogs from "./../Pages/AllBlogs";
 // import Wishlist from './../Pages/Wishlist';
 import FeaturedBlogs from "../Pages/FeaturedBlogs";
 import Wishlist from "../Pages/Wishlist";
@@ -33,35 +33,57 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/allBlogs",
-        element: <PrivateRoute><AllBlogs></AllBlogs></PrivateRoute>,
-        
+        element: (
+          <PrivateRoute>
+            <AllBlogs></AllBlogs>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/featuredBlogs",
-        element: <PrivateRoute><FeaturedBlogs></FeaturedBlogs></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <FeaturedBlogs></FeaturedBlogs>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/wishlist",
-        element: <PrivateRoute><Wishlist></Wishlist></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/wishlist2"),
+        element: (
+          <PrivateRoute>
+            <Wishlist></Wishlist>
+          </PrivateRoute>
+        ),
+        loader: () =>
+          fetch("https://assignment-11-server-nine-psi.vercel.app/wishlist2"),
       },
       {
         path: "/wishlistCard/:id",
         element: <WishlistCard></WishlistCard>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/blogs/${params.id}`),
+          fetch(
+            `https://assignment-11-server-nine-psi.vercel.app/blogs/${params.id}`
+          ),
       },
       {
         path: "/blogDetails/:id",
         element: <BlogDetails></BlogDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allBlog/${params.id}`),
+          fetch(
+            `https://assignment-11-server-nine-psi.vercel.app/allBlog/${params.id}`
+          ),
       },
       {
         path: "/update/:id",
-        element: <PrivateRoute><Update></Update></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <Update></Update>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allBlog/${params.id}`),
+          fetch(
+            `https://assignment-11-server-nine-psi.vercel.app/allBlog/${params.id}`
+          ),
       },
       {
         path: "/login",
