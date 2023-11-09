@@ -22,6 +22,11 @@ const BlogDetails = () => {
             <button className="btn btn-grad">Update</button>
           </Link>
         </div>
+        <div>
+          <h2 className='text-xl font-medium'>Comment Area</h2>
+          <textarea className='border border-black' name="text" id="" cols="30" rows="5"></textarea>
+          <input className='btn btn-sm' type="submit" value="Submit" />
+        </div>
       </div>
     </div>
   );
