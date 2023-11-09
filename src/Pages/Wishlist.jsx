@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import WishDetails from '../Components/WishlistCard/WishDetails';
+import { AuthContext } from '../Provider/Context';
 
 const Wishlist = () => {
+  const { user } = useContext(AuthContext);
   const items = useLoaderData();
   console.log(items);
   const [itmData, setItmData] = useState(items);
-  console.log('9wis',itmData);
+  console.log('9wis', itmData);
+  const url = `https://assignment-11-server-nine-psi.vercel.app/wishlist2?email=${user.email}`;
+  useEffect(() => {
+    fetch(url, {credentials: 'include'})
+      .then((res) => res.json())
+      .then((data) => setItmData(data));
+  }, []);
   return (
     <div className="my-4 bg-base-100">
       <div className="text-center">

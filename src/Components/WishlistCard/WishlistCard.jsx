@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/Context";
@@ -7,6 +7,9 @@ import { AuthContext } from "../../Provider/Context";
 const WishlistCard = () => {
   const { user } = useContext(AuthContext);
   const cardData = useLoaderData();
+
+  
+
   const { title, photo, category, shortDes, longDes } = cardData;
   const wishlistData = {
     title,
@@ -16,6 +19,7 @@ const WishlistCard = () => {
     longDes,
     email: user.email,
   };
+  
 
   const handleWishlist = () => {
     axios

@@ -85,7 +85,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       )}
-      {user && (
+      {/* {user?.email && (
         <li>
           <NavLink
             to={"/wishlist"}
@@ -100,22 +100,46 @@ const Navbar = () => {
             Wishlist
           </NavLink>
         </li>
-      )}
+      )} */}
 
-      <li>
-        <NavLink
-          to={"/login"}
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "underline text-white btn btn-primary btn-sm"
-              : "btn btn-ghost btn-sm"
-          }
-        >
-          Login
-        </NavLink>
-      </li>
+      {user?.email ? (
+        <>
+          <li>
+            <NavLink
+              to={"/wishlist"}
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "underline text-white btn btn-primary btn-sm"
+                  : "btn btn-ghost btn-sm"
+              }
+            >
+              Wishlist
+            </NavLink>
+          </li>
+          <li>
+            <button onClick={handleSignOut} className="btn btn-sm">
+              Sign Out
+            </button>
+          </li>
+        </>
+      ) : (
+        <li>
+          <NavLink
+            to={"/login"}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "underline text-white btn btn-primary btn-sm"
+                : "btn btn-ghost btn-sm"
+            }
+          >
+            Login
+          </NavLink>
+        </li>
+      )}
     </div>
   );
 
@@ -163,7 +187,7 @@ const Navbar = () => {
             <img src={userImage} alt="user img" />
           </div>
         </label>
-        {user ? (
+        {/* {user ? (
           <button onClick={handleSignOut} className="btn">
             Sign Out
           </button>
@@ -171,7 +195,7 @@ const Navbar = () => {
           <Link to={"/login"}>
             <button className="btn">Login</button>
           </Link>
-        )}
+        )} */}
       </div>
     </div>
   );

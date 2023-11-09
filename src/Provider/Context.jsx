@@ -9,6 +9,7 @@ import {
   signOut,
 } from "firebase/auth";
 import app from "../Firebase/firebase.config";
+import axios from "axios";
 
 export const AuthContext = createContext(null);
 
@@ -42,8 +43,22 @@ const Context = ({ children }) => {
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log(currentUser);
+      const userEmail = currentUser?.email || user.email;
+      const loggedUser = { email: userEmail };
       setUser(currentUser);
       setLoading(false);
+      if (currentUser) {
+        axios.post('https://assignment-11-server-nine-psi.vercel.app/jwt', loggedUser, { withCredentials: true })
+          .then(res => {
+          console.log(res.data);
+        })
+      }
+      else {
+        axios.post('https://assignment-11-server-nine-psi.vercel.app/logout', loggedUser, { withCredentials: true })
+          .then(res => {
+          console.log(res.data);
+        })
+      }
     });
     return () => {
       unSubscribe();
