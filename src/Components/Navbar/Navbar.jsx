@@ -37,62 +37,70 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to={"/addBlog"}
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "underline text-white btn btn-primary btn-sm"
-              : "btn btn-ghost btn-sm"
-          }
-        >
-          Add Blog
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to={"/allBlogs"}
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "underline text-white btn btn-primary btn-sm"
-              : "btn btn-ghost btn-sm"
-          }
-        >
-          All Blogs
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to={"/featuredBlogs"}
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "underline text-white btn btn-primary btn-sm"
-              : "btn btn-ghost btn-sm"
-          }
-        >
-          Featured Blogs
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to={"/wishlist"}
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "underline text-white btn btn-primary btn-sm"
-              : "btn btn-ghost btn-sm"
-          }
-        >
-          Wishlist
-        </NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink
+            to={"/addBlog"}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "underline text-white btn btn-primary btn-sm"
+                : "btn btn-ghost btn-sm"
+            }
+          >
+            Add Blog
+          </NavLink>
+        </li>
+      )}
+      {user && (
+        <li>
+          <NavLink
+            to={"/allBlogs"}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "underline text-white btn btn-primary btn-sm"
+                : "btn btn-ghost btn-sm"
+            }
+          >
+            All Blogs
+          </NavLink>
+        </li>
+      )}
+      {user && (
+        <li>
+          <NavLink
+            to={"/featuredBlogs"}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "underline text-white btn btn-primary btn-sm"
+                : "btn btn-ghost btn-sm"
+            }
+          >
+            Featured Blogs
+          </NavLink>
+        </li>
+      )}
+      {user && (
+        <li>
+          <NavLink
+            to={"/wishlist"}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "underline text-white btn btn-primary btn-sm"
+                : "btn btn-ghost btn-sm"
+            }
+          >
+            Wishlist
+          </NavLink>
+        </li>
+      )}
 
       <li>
         <NavLink
