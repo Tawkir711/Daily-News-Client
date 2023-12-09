@@ -22,7 +22,7 @@ const Newsletter = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className='flex flex-row-reverse'>
+      <div className='md:flex flex-row-reverse'>
         <div className="form-control mx-auto md:flex-1 my-10 px-3 ">
           <h1 className="text-2xl font-semibold">Newsletter Section</h1>
           <label className="label">

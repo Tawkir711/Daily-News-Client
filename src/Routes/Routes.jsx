@@ -33,33 +33,24 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/allBlogs",
-        element: (
-          <PrivateRoute>
-            <AllBlogs></AllBlogs>
-          </PrivateRoute>
-        ),
+        element: 
+            <AllBlogs></AllBlogs>,
       },
       {
         path: "/featuredBlogs",
-        element: (
-          <PrivateRoute>
-            <FeaturedBlogs></FeaturedBlogs>
-          </PrivateRoute>
-        ),
+        element: 
+            <FeaturedBlogs></FeaturedBlogs>,
       },
       {
         path: "/wishlist",
-        element: (
-          <PrivateRoute>
-            <Wishlist></Wishlist>
-          </PrivateRoute>
-        ),
+        element:
+            <Wishlist></Wishlist>,
         loader: () =>
           fetch("https://assignment-11-server-nine-psi.vercel.app/wishlist2"),
       },
       {
         path: "/wishlistCard/:id",
-        element: <WishlistCard></WishlistCard>,
+        element: <PrivateRoute><WishlistCard></WishlistCard></PrivateRoute>,
         loader: ({ params }) =>
           fetch(
             `https://assignment-11-server-nine-psi.vercel.app/blogs/${params.id}`
@@ -67,7 +58,7 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/blogDetails/:id",
-        element: <BlogDetails></BlogDetails>,
+        element:<PrivateRoute> <BlogDetails></BlogDetails></PrivateRoute>,
         loader: ({ params }) =>
           fetch(
             `https://assignment-11-server-nine-psi.vercel.app/allBlog/${params.id}`
@@ -75,11 +66,8 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/update/:id",
-        element: (
-          <PrivateRoute>
-            <Update></Update>
-          </PrivateRoute>
-        ),
+        element:
+            <Update></Update>,
         loader: ({ params }) =>
           fetch(
             `https://assignment-11-server-nine-psi.vercel.app/allBlog/${params.id}`

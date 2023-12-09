@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import WishDetails from '../Components/WishlistCard/WishDetails';
 import { AuthContext } from '../Provider/Context';
+import { Helmet } from 'react-helmet';
 
 const Wishlist = () => {
   const { user } = useContext(AuthContext);
@@ -17,11 +18,14 @@ const Wishlist = () => {
   }, []);
   return (
     <div className="my-4 bg-base-100">
+      <Helmet>
+        <title>Daily News / Wishlist</title>
+      </Helmet>
       <div className="text-center">
         <h3 className="text-2xl font-semibold">Wishlist</h3>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-6">
-        {itmData.length > 0 ? (
+        {itmData?.length > 0 ? (
           itmData.map((item) => (
             <WishDetails
               item={item}

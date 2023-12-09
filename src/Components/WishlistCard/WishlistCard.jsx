@@ -22,8 +22,7 @@ const WishlistCard = () => {
   
 
   const handleWishlist = () => {
-    axios
-      .post(
+    axios?.post(
         "https://assignment-11-server-nine-psi.vercel.app/wishlist2",
         wishlistData
       )

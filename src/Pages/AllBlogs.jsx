@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Details from "../Components/Details/Details";
+import { Helmet } from "react-helmet";
 
 const AllBlogs = () => {
   // const blogs = useLoaderData();
@@ -16,6 +17,9 @@ const AllBlogs = () => {
   console.log(blog);
   return (
     <div className="my-4 bg-base-100">
+      <Helmet>
+        <title>Daily News / All Blogs</title>
+      </Helmet>
       <div className="text-center">
         <h3 className="text-2xl font-semibold">All Blog Page</h3>
       </div>

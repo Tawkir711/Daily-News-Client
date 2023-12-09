@@ -43,10 +43,9 @@ const Context = ({ children }) => {
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log(currentUser);
-      const userEmail = currentUser?.email || user.email;
+      const userEmail = currentUser?.email || user?.email;
       const loggedUser = { email: userEmail };
-      setUser(currentUser);
-      setLoading(false);
+      
       if (currentUser) {
         axios.post('https://assignment-11-server-nine-psi.vercel.app/jwt', loggedUser, { withCredentials: true })
           .then(res => {
@@ -59,6 +58,8 @@ const Context = ({ children }) => {
           console.log(res.data);
         })
       }
+      setUser(currentUser);
+      setLoading(false); 
     });
     return () => {
       unSubscribe();
@@ -73,7 +74,9 @@ const Context = ({ children }) => {
     logOut,
     signInGoogle,
   };
-  return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={values}>
+    {children}
+  </AuthContext.Provider>;
 };
 
 export default Context;

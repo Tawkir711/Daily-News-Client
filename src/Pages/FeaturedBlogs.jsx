@@ -1,6 +1,7 @@
 import axios from "axios";
 import MUIDataTable from "mui-datatables";
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const FeaturedBlogs = () => {
   const columns = [
@@ -39,6 +40,9 @@ const FeaturedBlogs = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Daily News / Featured Blogs</title>
+      </Helmet>
       <MUIDataTable title={"Daily News"} data={data} columns={columns} />;
     </div>
   );
